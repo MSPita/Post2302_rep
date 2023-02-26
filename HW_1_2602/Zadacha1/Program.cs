@@ -1,17 +1,17 @@
-﻿Console.WriteLine("Введите первое число");
+﻿Console.Write("a = ");
 int a = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите второе число");
+Console.Write("b = ");
 int b = int.Parse(Console.ReadLine()!);
 
 if(a > b)
 {
-    Console.Write("Наибольшее число ");
+    Console.Write("max = ");
     Console.Write(a);
 
 }
 else
 {
-    Console.Write("Наибольшее число ");
+    Console.Write("max = ");
     Console.Write(b);
 
 }
