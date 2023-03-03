@@ -7,3 +7,4 @@ double Dis(double x1, double y1, double z1, double x2, double y2, double z2)
 
 }
 Console.WriteLine(Math.Round(Dis(3, 6, 8, 2, 1, -7),2, MidpointRounding.AwayFromZero));
+Console.WriteLine(Math.Round(Dis(7, -5, 0, 1, -1, 9),2, MidpointRounding.AwayFromZero));
