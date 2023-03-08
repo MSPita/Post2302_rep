@@ -5,7 +5,7 @@ Console.Write("Введите число -> ");
 int A = int.Parse(Console.ReadLine()!);
 
 
-void SumNum(int num)
+void Div(int num)
 {
     int sum = 0;
     for(int i = 0; num > 0; i++)
@@ -14,16 +14,9 @@ void SumNum(int num)
         num = num / 10;
 
     }
-        
-
+    Console.Write("Сумма цифр числа -> ");  
+    Console.WriteLine(sum);
 }
 
 
-SumNum(A);
-
-//Console.WriteLine();
-
-//Console.Write("");
-//Console.Write(result);
-
-//Console.WriteLine("Hello, World!");
+Div(A);
