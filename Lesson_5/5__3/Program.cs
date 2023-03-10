@@ -48,3 +48,4 @@ int sec = int.Parse(Console.ReadLine()!);
 int result = RetNum(mass, first, sec);
 
 Console.WriteLine(result);
+
