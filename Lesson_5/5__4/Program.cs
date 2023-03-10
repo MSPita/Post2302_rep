@@ -49,5 +49,4 @@ int[] mass = MassNums(num, start, stop);
 Print(mass);
 
 int[] newNewMass = MultiMas(mass);
-Print(newNewMass); //Ура)
-
+Print(newNewMass);
