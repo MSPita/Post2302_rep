@@ -20,7 +20,7 @@ int[] Nums(int size, int from, int to)
     return arr;
 }
 
-void OddNum(int[] arr)
+int OddNum(int[] arr)
 {
     int sumodd = 0;
     
@@ -31,6 +31,7 @@ void OddNum(int[] arr)
         
     }
     Console.WriteLine($"Сумма нетных чисел -> {sumodd}");
+    return sumodd;
 }
 
 Console.WriteLine("Задайте размер массива ");

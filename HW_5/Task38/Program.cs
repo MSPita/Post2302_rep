@@ -17,25 +17,28 @@ double[] Nums(int size, double from, double to)
     double[] arr = new double[size];
 
     for (int i = 0; i < size; i++)
-        arr[i] = new Random().NextDouble() * (from - to) + to;
+        arr[i] = Math.Round(new Random().NextDouble() * (from - to) + to , 2);
     return arr;
 }
 
-double Dif(double[] arr)
+void Dif(double[] arr)
 {
     double max = arr[0];
     double min = arr[0];
-    double result = max - min;
-
+    
     for (int i = 1; i < arr.Length; i++)
     {
-        if (arr[i] > max) max = arr[i];
-        else if (arr[i] < min) min = arr[i];
+        if (arr[i] > max) 
+            max = arr[i];
+        else if (arr[i] < min) 
+            min = arr[i];
         i++;
         
     }
-    Console.WriteLine($"Разность -> {result}");
-    return result;
+    double result = max - min;
+
+    Console.WriteLine($"Разность -> ({max} - {min}) = {Math.Round(result), 2}");
+    
 }
 
 Console.WriteLine("Задайте размер массива ");

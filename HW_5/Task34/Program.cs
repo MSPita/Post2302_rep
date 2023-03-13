@@ -20,7 +20,7 @@ int[] Nums(int size)
     return arr;
 }
 
-void Even(int[] arr)
+int Even(int[] arr)
 {
     int ev = 0;
     
@@ -31,7 +31,9 @@ void Even(int[] arr)
         
     }
     Console.WriteLine($"Четных чисел -> {ev}");
+    return ev;
 }
+
 
 Console.WriteLine("Задайте размер массива ");
 int num = int.Parse(Console.ReadLine()!);
