@@ -48,7 +48,8 @@ int stop = int.Parse(Console.ReadLine()!);
 
 int[,] mass = MassNums(row_num, column_num, start, stop);
 Print(mass);
-int val = int.Parse(Console.ReadLine()!);
+
+int val = int.Parse(Console.ReadLine()!); //переменная для искомого числа
 
 string result = SearchNum(mass, val);
 Console.WriteLine(result);
