@@ -25,25 +25,33 @@ int[,] Massiv(int row, int column, int from, int to)
     return arr;
 }
 
-double ArithMean(int[,] arr)
+double[] ArithMean(int[,] arr)
 {
-    int row = arr.GetLength(0);
-    int column = arr.GetLength(1);
-    double[] sum = new double[column];
+    
+    double[] mean = new double[arr.GetLength(1)];
 
-    for (int j = 0; j < column; j++)
+    for (int j = 0; j < arr.GetLength(1); j++)
     {
-        for (int i = 0; i < row; i++)
-            sum[j] += arr[i, j];
-        sum[j] /= row;
+        for (int i = 0; i < arr.GetLength(0); i++)
+            mean[j] += arr[i, j];
+        mean[j] /= arr.GetLength(0);
 
     }
-    return sum;
-    Console.WriteLine(sum);
+    return mean;
 }
 
+string PrintDoubleArr(double[] arr)
+{
+    string res = String.Empty;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        res += Math.Round(arr[i], 2);
+        if (i != arr.Length - 1) res += ";";
+        else res += ".";
 
-
+    }
+    return res;
+}
 
 
 Console.Write("Количество строк -> ");
@@ -59,8 +67,9 @@ Console.WriteLine();
 int[,] mass = Massiv(row_num, column_num, start, stop);
 Print(mass);
 
-//int val = int.Parse(Console.ReadLine()!); //переменная для искомого числа
 
-//double result = 
-ArithMean(mass);
-//Console.WriteLine(result);
+double[] arith = ArithMean(mass);
+string print = PrintDoubleArr(arith);
+
+Console.WriteLine(print);
+
