@@ -23,3 +23,16 @@ string RowToColumn(int[,] array)
     PrintArray(array);
     return "Да!";
 }
+
+Console.Write("Количество строк -> ");
+int row_num = int.Parse(Console.ReadLine()!);
+Console.Write("Количество столбцов -> ");
+int column_num = int.Parse(Console.ReadLine()!);
+Console.Write("Начало диапазона -> ");
+int start = int.Parse(Console.ReadLine()!);
+Console.Write("Конец диапазона -> ");
+int stop = int.Parse(Console.ReadLine()!);
+Console.WriteLine();
+
+int[,] mass = Massiv(row_num, column_num, start, stop);
+Print(mass);
