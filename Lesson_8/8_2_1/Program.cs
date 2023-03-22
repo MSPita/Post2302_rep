@@ -1,4 +1,4 @@
-﻿// 2. Задайте двумерный массив. Напишите программу,
+﻿// // 2. Задайте двумерный массив. Напишите программу,
 //    которая заменяет строки на столбцы. В случае, если это невозможно,
 //    программа должна вывести сообщение для пользователя.
 
@@ -26,26 +26,28 @@ int[,] Massiv(int row, int column, int from, int to)
     return arr;
 }
 
-bool Check(int row, int column)
-{   
-
-    bool result = row != column;
-    return result;
-}
 
 string RowToColumn(int[,] array)
 {
-    if (Check(array.GetLength(0), array.GetLength(1))) return "Нет!";
-
-    for (int i = 1; i < array.GetLength(0); i++)
+    if (array.GetLength(0) != array.GetLength(1))
     {
-        for (int j = 0; j < i; j++)
-        {
-            (array[i, j], array[j, i]) = (array[j, i], array[i, j]);
-        }
+        Console.WriteLine("невозможно");
+        return "";
+
     }
-    Print(array);
-    return "Да!";
+    else
+    {
+
+        for (int i = 1; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                (array[i, j], array[j, i]) = (array[j, i], array[i, j]);
+            }
+        }
+        Print(array);
+        return "BOT!";
+    }
 }
 
 Console.Write("Количество строк -> ");
@@ -63,3 +65,5 @@ Print(mass);
 
 string result = RowToColumn(mass);
 Console.WriteLine(result);
+//Print(mass);
+
