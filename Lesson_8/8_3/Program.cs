@@ -3,7 +3,7 @@
 //    встречается элемент входных данных. Значения элементов массива 0..9
 
 
-Console.WriteLine("Hello, World!");
+
 int InputNum(string message)
 {
     Console.Write(message);
@@ -18,7 +18,7 @@ int[,] Create2DArray(int rows, int columns)
 void Fill2DArray(int[,] array, int maxValue)
 {
     Random rnd = new Random();
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++) 
         for (int j = 0; j < array.GetLength(1); j++)
             array[i, j] = rnd.Next(maxValue + 1);
 }
