@@ -10,7 +10,7 @@ void Print(int[,] arr)
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < column; j++)
-            Console.Write($" {arr[i, j]} ");
+            Console.Write($" {arr[i, j],3}");
         Console.WriteLine();
     }
     Console.WriteLine();
@@ -35,14 +35,14 @@ void Sorting(int[,] arr)
     for (int i = 0; i < row; i++)
         for (int k = 0; k < column - 1; k++)
             for (int j = 0; j < column - 1; j++)
-            
+
             {
                 if (arr[i, j] <= arr[i, j + 1])
                     (arr[i, j], arr[i, j + 1]) = (arr[i, j + 1], arr[i, j]);
 
-                
+
             }
-    
+
 }
 
 
