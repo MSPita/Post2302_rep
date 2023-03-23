@@ -30,10 +30,10 @@ void Sorting(int[,] arr)
 {
     int row = arr.GetLength(0);
     int column = arr.GetLength(1);
-    int[,] sort = new int[row, column];
+    //int[,] sort = new int[row, column];
 
     for (int i = 0; i < row; i++)
-        for (int k = 0; k < column; k++)
+        for (int k = 0; k < column - 1; k++)
             for (int j = 0; j < column - 1; j++)
             
             {
